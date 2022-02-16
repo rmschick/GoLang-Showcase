@@ -10,6 +10,7 @@ import "fmt"
 
 func main() {
 	var i int = 1
+	num := 10
 
 	//for loop thats only one condition
 	for i <= 3 {
@@ -36,5 +37,10 @@ func main() {
 			continue
 		}
 		fmt.Println(n)
+	}
+
+	//more practice
+	for k := 0; k<num; k++ {
+		fmt.Println(k, "*", num, " = ", k*num)
 	}
 }

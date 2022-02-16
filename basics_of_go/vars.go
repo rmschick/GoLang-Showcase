@@ -18,4 +18,7 @@ func main() {
 	f := "shorthand for declaring and initializing a variable"
 	fmt.Println(f)
 
+	p := 68
+	fmt.Println(p)
+
 }
