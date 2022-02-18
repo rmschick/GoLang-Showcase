@@ -43,4 +43,8 @@ func main() {
 	for k := 0; k<num; k++ {
 		fmt.Println(k, "*", num, " = ", k*num)
 	}
+
+	for a := i; a<=num; a++ {
+		fmt.Println("I want ", a, "hamburgers!")
+	}
 }
