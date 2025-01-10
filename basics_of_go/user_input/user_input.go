@@ -17,13 +17,18 @@ func main() {
 	fmt.Println("Enter your first name: ")
 
 	var first string
-	fmt.Scanln(&first)
-	
+	_, err := fmt.Scanln(&first)
+	if err != nil {
+		return
+	}
+
 	fmt.Println("Enter your last name: ")
-	
+
 	var last string
-	fmt.Scanln(&last)
+	_, err = fmt.Scanln(&last)
+	if err != nil {
+		return
+	}
 
 	fmt.Println("Your full name is", first, last)
 }
-

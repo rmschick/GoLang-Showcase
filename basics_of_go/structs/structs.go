@@ -11,10 +11,10 @@ import "fmt"
 
 type person struct {
 	name string
-	age int
+	age  int
 }
 
-func newPerson(name string, age int) *person{
+func newPerson(name string, age int) *person {
 	p := person{name: name, age: age}
 	return &p
 }
@@ -22,11 +22,17 @@ func newPerson(name string, age int) *person{
 func main() {
 	fmt.Println("Enter your first name: ")
 	var name string
-	fmt.Scanln(&name)
+	_, err := fmt.Scanln(&name)
+	if err != nil {
+		return
+	}
 
 	fmt.Println("Enter your age: ")
 	var age int
-	fmt.Scanln(&age)
+	_, err = fmt.Scanln(&age)
+	if err != nil {
+		return
+	}
 
 	fmt.Println(*newPerson(name, age))
 }

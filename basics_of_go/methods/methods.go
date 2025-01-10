@@ -25,13 +25,13 @@ func main() {
 
 	fmt.Println("Rectangle r = ", r)
 	fmt.Println("area: ", r.area())
-	fmt.Println("perim: ", r.perim(), "\n")
+	fmt.Println("perim: ", r.perim())
 
 	rp := &r
 
 	fmt.Println("Rectangle rp = ", rp)
 	fmt.Println("area: ", rp.area())
-	fmt.Println("perim: ", rp.perim(), "\n")
+	fmt.Println("perim: ", rp.perim())
 
 	test := rect{height: 100, width: 100}
 

@@ -9,8 +9,10 @@ package main
 import "fmt"
 
 func main() {
-	var i int = 1
-	num := 10
+	var (
+		i   = 1
+		num = 10
+	)
 
 	//for loop thats only one condition
 	for i <= 3 {
@@ -40,11 +42,11 @@ func main() {
 	}
 
 	//more practice
-	for k := 0; k<num; k++ {
+	for k := 0; k < num; k++ {
 		fmt.Println(k, "*", num, " = ", k*num)
 	}
 
-	for a := i; a<=num; a++ {
+	for a := i; a <= num; a++ {
 		fmt.Println("I want ", a, "hamburgers!")
 	}
 }
