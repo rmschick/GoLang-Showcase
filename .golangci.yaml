@@ -1,0 +1,87 @@
+run:
+  timeout: 5m
+  issues-exit-code: 3
+  tests: false
+  go: '1.23'
+# output configuration options
+output:
+  formats:
+    - format: json
+      path: stderr
+    - format: colored-line-number
+# All available settings of specific linters.
+linters-settings:
+  dupl:
+    threshold: 100
+  funlen:
+    lines: 80
+    statements: 60
+  gocritic:
+    disabled-checks:
+      - sloppyLen
+  govet:
+    enable-all: true
+    disable:
+      - fieldalignment
+linters:
+  linters:
+    disable-all: true
+    enable:
+      - dupl
+      - errcheck
+      - exportloopref
+      - funlen
+      - gci
+      - gocritic
+      - goconst
+      - goimports
+      - gofmt
+      - gofumpt
+      - gomnd
+      - gosec
+      - gosimple
+      - govet
+      - ineffassign
+      - nakedret
+      - nestif
+      - nilerr
+      - nlreturn
+      - prealloc
+      - stylecheck
+      - tparallel
+      - typecheck
+      - unconvert
+      - unparam
+      - unused
+      - whitespace
+      - wsl
+      - tagalign
+      - tagliatelle
+      - usestdlibvars
+      - rowserrcheck
+      - sqlclosecheck
+      - godot
+      - godox
+      - asasalint
+      - cyclop
+      - gochecknoglobals
+      - interfacebloat
+      - nilnil
+      - noctx
+      - goprintffuncname
+      - nonamedreturns
+      - contextcheck
+      - bodyclose
+      - bidichk
+      - staticcheck
+      - durationcheck
+      - errname
+      - mirror
+      - ireturn
+      - nosprintfhostport
+      - predeclared
+      - promlinter
+      - errorlint
+      - gocheckcompilerdirectives
+      - execinquery
+    fast: false

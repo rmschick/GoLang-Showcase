@@ -8,6 +8,7 @@ package main
 
 import "fmt"
 
+// nolint: ineffassign, staticcheck
 func zeroval(ival int) {
 	ival = 0
 }

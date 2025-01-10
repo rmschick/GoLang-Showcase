@@ -1,0 +1,32 @@
+name: GoLang-Showcase CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+env:
+  GOLANG_VERSION: 1.23
+  GOLANGCI_VERSION: "v1.60.1"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: ${{ env.GOLANG_VERSION }}
+      - name: Run Linter
+        uses: golangci/golangci-lint-action@v6
+        with:
+          version: ${{ env.GOLANGCI_VERSION }}
+          args: --timeout=5m
+      - name: Run tests
+        run: go test ./...

@@ -29,6 +29,6 @@ func main() {
 		}
 	}
 
-	fmt.Println("\nnextInt() ending value is ", nextInt())
+	fmt.Println("nextInt() ending value is ", nextInt())
 	fmt.Println("newInts() ending value is ", newInts())
 }
